@@ -2,7 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="OpenALSharp" />
-  </ItemGroup>
+  <PropertyGroup>
+    <Description>A thin .NET wrapper around OpenAL soft.</Description>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Jjagg</Authors>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Jjagg/OalSoft.NET/master/LICENSE.txt</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/Jjagg/OalSoft.NET</RepositoryUrl>
+    <PackageTags>OpenAL;Audio</PackageTags>
+  </PropertyGroup>
 </Project>
