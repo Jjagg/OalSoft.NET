@@ -60,5 +60,13 @@ namespace OalSoft.NET
             AlHelper.AlCheckError("Failed to get number of processed buffers.");
             return processed;
         }
+
+        /// <summary>
+        /// Unqueue all buffers.
+        /// </summary>
+        public void ClearBuffers()
+        {
+            AL10.alSourcei(Name, AL10.AL_BUFFER, 0);
+        }
     }
 }

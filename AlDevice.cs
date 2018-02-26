@@ -21,6 +21,15 @@ namespace OalSoft.NET
         }
 
         /// <summary>
+        /// Close the default device if it is opened.
+        /// </summary>
+        public static void CloseDefault()
+        {
+            if (_defaultDevice != null && !_defaultDevice._disposed)
+                _defaultDevice.Dispose();
+        }
+
+        /// <summary>
         /// Opens the default playback device if not open and returns it.
         /// </summary>
         public static AlDevice GetDefault()
