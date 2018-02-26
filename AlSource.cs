@@ -112,20 +112,20 @@ namespace OalSoft.NET
         /// <summary>
         /// Get or set the playback position in samples. Position is relative to the beginning of the queued buffers.
         /// </summary>
-        public float SampleOffset
+        public int SampleOffset
         {
             get
             {
                 CheckDisposed();
                 Context.MakeCurrent();
-                AL10.alGetSourcef(Name, AL11.AL_SAMPLE_OFFSET, out var value);
+                AL10.alGetSourcei(Name, AL11.AL_SAMPLE_OFFSET, out var value);
                 return value;
             }
             set
             {
                 CheckDisposed();
                 Context.MakeCurrent();
-                AL10.alSourcef(Name, AL11.AL_SAMPLE_OFFSET, value);
+                AL10.alSourcei(Name, AL11.AL_SAMPLE_OFFSET, value);
             }
         }
 
